@@ -153,35 +153,49 @@ let numbers = [1, 2, 3, 4, 5,0,-11,-2,-3,-4,-5];
 //     return response.json();
 //     }
 //async await
-const fetchuserASYNCAWIT = async () => {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
-    if (!response.ok) {
-        throw new Error("Network response was not ok");
-    }
-    const data = await response.json();
-    console.log(data);
-    return data;
-}
-fetchuserASYNCAWIT().then((data) => {
-    console.log("User data fetched successfully:", data);
-}).catch((error) => {
-    console.error("Failed to fetch user data:", error);
-});
+// const fetchuserASYNCAWIT = async () => {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+//     if (!response.ok) {
+//         throw new Error("Network response was not ok");
+//     }
+//     const data = await response.json();
+//     console.log(data);
+//     return data;
+// }
+// fetchuserASYNCAWIT().then((data) => {
+//     console.log("User data fetched successfully:", data);
+// }).catch((error) => {
+//     console.error("Failed to fetch user data:", error);
+// });
 
-const axios = require('axios');
-const fetchuserAXIOS = async () => {
-  try {
-    const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
-    return response.data;
-  } catch (error) {
-    throw new Error("Failed to fetch user data using Axios: " + error.message);
-  }
-};
+// const axios = require('axios');
+// const fetchuserAXIOS = async () => {
+//   try {
+//     const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
+//     return response.data;
+//   } catch (error) {
+//     throw new Error("Failed to fetch user data using Axios: " + error.message);
+//   }
+// };
 
-fetchuserAXIOS()
-  .then((data) => {
-    console.log("User data fetched successfully using Axios:", data.slice(0, 5));
-  })
-  .catch((error) => {
-    console.error(error.message);
-  });
+// fetchuserAXIOS()
+//   .then((data) => {
+//     console.log("User data fetched successfully using Axios:", data.slice(0, 5));
+//   })
+//   .catch((error) => {
+//     console.error(error.message);
+//   });
+//readline
+// const readline = require('readline/promises');
+// const { stdin: input, stdout: output } = require('process');
+
+// async function main() {
+//   const rl = readline.createInterface({ input, output });
+//   const name = await rl.question('enter your name: ');
+//   console.log(`Hello, ${name}!`);
+//   rl.close();
+// }
+
+// main().catch((error) => {
+//   console.error(error);
+// });
