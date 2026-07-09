@@ -167,3 +167,21 @@ fetchuserASYNCAWIT().then((data) => {
 }).catch((error) => {
     console.error("Failed to fetch user data:", error);
 });
+
+const axios = require('axios');
+const fetchuserAXIOS = async () => {
+  try {
+    const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
+    return response.data;
+  } catch (error) {
+    throw new Error("Failed to fetch user data using Axios: " + error.message);
+  }
+};
+
+fetchuserAXIOS()
+  .then((data) => {
+    console.log("User data fetched successfully using Axios:", data.slice(0, 5));
+  })
+  .catch((error) => {
+    console.error(error.message);
+  });
