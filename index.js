@@ -162,4 +162,8 @@ const fetchuserASYNCAWIT = async () => {
     console.log(data);
     return data;
 }
-console.log(fetchuserASYNCAWIT());
+fetchuserASYNCAWIT().then((data) => {
+    console.log("User data fetched successfully:", data);
+}).catch((error) => {
+    console.error("Failed to fetch user data:", error);
+});
